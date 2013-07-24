@@ -16,7 +16,7 @@ module Zwemwater
       
       status = @data['properties']['status']
       status['code'] = status['code'].to_sym
-      status['date'] = Date.parse(status['datum']) unless status['datum'].nil?
+      status['date'] = Date.parse(status.delete('datum')) unless status['datum'].nil?
       
       @status = status
     end
