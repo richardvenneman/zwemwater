@@ -29,6 +29,7 @@ puts zwemwater.data     # { "properties" => { "objectType" => "zwemplek", "id" =
 
 ## TODO
 
+* Error handling
 * Better test coverage
 * Better handling of raw zwemwater.nl data
 * Provide additional methods
