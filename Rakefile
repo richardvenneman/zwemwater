@@ -12,6 +12,10 @@ task :install do
   system "gem install zwemwater-#{Zwemwater::VERSION}.gem --dev"
 end
 
+task :release => :build do
+  system "gem push zwemwater-#{Zwemwater::VERSION}.gem"
+end
+
 Rake::TestTask.new do |t|
   t.libs += ['lib/zwemwater', 'spec']
   t.pattern = 'spec/**/*_spec.rb'
