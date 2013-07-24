@@ -1,4 +1,5 @@
-require 'httpclient'
+require 'httparty'
+require 'json'
 
 class Zwemwater
   attr_reader :site
@@ -12,8 +13,7 @@ class Zwemwater
   end
   
   def download_statusses
-    http_client = HTTPClient.new
-    response = http_client.get(SOURCE_URL)
-    @statusses = response.http_body
+    response = HTTParty.get(SOURCE_URL)
+    @statusses = response.body
   end
 end
