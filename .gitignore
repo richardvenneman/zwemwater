@@ -1,18 +1,8 @@
-# osx noise
 .DS_Store
-profile
+rdoc
+*.gem
 
-# xcode noise
-build/*
-*.mode1
-*.mode1v3
-*.mode2v3
-*.perspective
-*.perspectivev3
-*.pbxuser
-*.xcworkspace
-xcuserdata
-
-# svn & cvs
-.svn
-CVS
+.rvmrc
+.rspec
+.bundle
+.ruby-version
