@@ -1,6 +1,6 @@
 module Zwemwater
   class Base
-    attr_reader :query, :data
+    attr_reader :query
     
     def initialize(query)
       @query = query
@@ -10,6 +10,8 @@ module Zwemwater
       Zwemwater::Service.download_statusses if Zwemwater.statusses.nil?
       @data = Zwemwater.statusses['features'].select { |f| f['properties']['naam'] == @query }.first
     end
+    
+    def data; @data || get_data; end;
     
     def status
       get_data if @status.nil?
