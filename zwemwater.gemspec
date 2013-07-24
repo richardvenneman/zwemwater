@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'zwemwater'
-  s.version     = '0.0.1'
-  s.date        = '2013-07-14'
+  s.version     = '0.1.0'
+  s.date        = '2013-07-24'
   s.summary     = 'Zwemwater.nl Ruby API'
   s.description = 'A simple gem to get swimming water recommendations from recognized Dutch swimming spots'
   s.authors     = ['Richard Venneman']
