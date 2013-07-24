@@ -10,4 +10,6 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/richardvenneman/zwemwater'
   
   s.add_development_dependency('rake', '~> 10.1.0')
+  s.add_development_dependency('httpclient', '~> 2.3.3')
+  s.add_development_dependency('webmock', '~> 1.13.0')
 end

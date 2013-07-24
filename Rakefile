@@ -1,8 +1,8 @@
 require 'rake/testtask'
  
 Rake::TestTask.new do |t|
-  t.libs << 'lib/zwemwater'
-  t.test_files = FileList['spec/*_spec.rb']
+  t.libs += ['lib/zwemwater', 'spec']
+  t.pattern = 'spec/**/*_spec.rb'
   t.verbose = true
 end
  
