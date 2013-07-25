@@ -30,7 +30,6 @@ puts zwemwater.data     # { "properties" => { "objectType" => "zwemplek", "id" =
 ## TODO
 
 * Error handling
-* Better test coverage
 * Better handling of raw zwemwater.nl data
 * Provide additional methods
 
@@ -44,4 +43,4 @@ puts zwemwater.data     # { "properties" => { "objectType" => "zwemplek", "id" =
 
 ## License
 
-Copyright (c) 2013-2013 Richard Venneman. See LICENSE for details.
+MIT. See `LICENSE`.
