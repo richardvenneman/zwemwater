@@ -33,7 +33,7 @@ puts zwemwater.data     # { "properties" => { "objectType" => "zwemplek", "id" =
 
 ### Listing possible queries
 
-A list of all possible queries (locations) can be accessed trough `Zwemwater::Response#locations` after instantiation or after running manual fetch of statuses.
+A list of all possible queries (locations) can be accessed trough `Zwemwater::Response#locations` after instantiation or after a manual fetch of statuses.
 
 ```ruby
 Zwemwater::Service.get_statuses
