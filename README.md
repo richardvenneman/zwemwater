@@ -20,17 +20,23 @@ zwemwater = Zwemwater.new('Blauwe Meer Dinxperlo')
 puts zwemwater.status     # { "code" => :negatief_zwemadvies, "date" => #<Date: 2013-07-05> }
 ```
 
-The zwemwater.nl website provides more information on swimming spots than just the status. This data is also fetched and can be accessed trough the `#data` property of a zwemwater instance.
+The zwemwater.nl website provides more information on swimming spots than just the status. This data is also fetched and can be accessed trough the `#data` method of a zwemwater instance.
 
 ```ruby
 zwemwater = Zwemwater.new('Lytse Wielen')
 puts zwemwater.data     # { "properties" => { "objectType" => "zwemplek", "id" => 1686, "status" => { "code" => "goed" }, "boundingBox" => { "minx" => 187255.29648096, "miny" => 580892.53598798, "maxx" => 187426.65648096, "maxy" => 580965.19598798}, "naam" => "Lytse Wielen", "zwemwaterlocatieId" => 965}, "geometry" => { "type" => "Point", "coordinates" => [187340.3393170484, 580935.4267625385]}, "type" => "Feature" }
 ```
 
+A list of all possible queries (locations) can be accessed trough `Zwemwater::Response#locations` after instantiation or after running manual fetch of statuses.
+
+```ruby
+Zwemwater::Service.get_statuses
+puts Zwemwater::Response.locations     # ["Aakvlaai, Badstrand", "Abbertstrand", "Agnietenplas Oost", ..]
+````
+
 ## TODO
 
 * Better handling of raw zwemwater.nl data
-* Provide additional methods
 
 ## Contributing
 

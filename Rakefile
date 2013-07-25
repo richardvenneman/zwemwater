@@ -8,7 +8,7 @@ task :build do
   system "gem build zwemwater.gemspec"
 end
 
-task :install do
+task :install => :build do
   system "gem install zwemwater-#{Zwemwater::VERSION}.gem --dev"
 end
 
