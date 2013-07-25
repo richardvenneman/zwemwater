@@ -1,4 +1,5 @@
 # Zwemwater
+[![Build Status](https://travis-ci.org/richardvenneman/zwemwater.png?branch=master)](https://travis-ci.org/richardvenneman/zwemwater)
 
 Zwemwater provides a simple API to get the latest known status from recognized Dutch swimming spots. It pulls data from the [Dutch zwemwater.nl website](http://zwemwater.nl).
 
@@ -26,6 +27,8 @@ The zwemwater.nl website provides more information on swimming spots than just t
 zwemwater = Zwemwater.new('Lytse Wielen')
 puts zwemwater.data     # { "properties" => { "objectType" => "zwemplek", "id" => 1686, "status" => { "code" => "goed" }, "boundingBox" => { "minx" => 187255.29648096, "miny" => 580892.53598798, "maxx" => 187426.65648096, "maxy" => 580965.19598798}, "naam" => "Lytse Wielen", "zwemwaterlocatieId" => 965}, "geometry" => { "type" => "Point", "coordinates" => [187340.3393170484, 580935.4267625385]}, "type" => "Feature" }
 ```
+
+### Listing possible queries
 
 A list of all possible queries (locations) can be accessed trough `Zwemwater::Response#locations` after instantiation or after running manual fetch of statuses.
 
