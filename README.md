@@ -1,5 +1,7 @@
 # Zwemwater
 [![Build Status](https://travis-ci.org/richardvenneman/zwemwater.png?branch=master)](https://travis-ci.org/richardvenneman/zwemwater)
+[![Gem Version](https://badge.fury.io/rb/zwemwater.png)](http://badge.fury.io/rb/zwemwater)
+
 
 Zwemwater provides a simple API to get the latest known status from recognized Dutch swimming spots. It pulls data from the [Dutch zwemwater.nl website](http://zwemwater.nl).
 
@@ -41,6 +43,10 @@ puts Zwemwater::Response.locations     # ["Aakvlaai, Badstrand", "Abbertstrand",
 
 * Better handling of raw zwemwater.nl data
 
+## Supported Ruby Versions
+
+Zwemwater is tested under 1.9.2, 1.9.3, 2.0.0, JRuby 1.7.2 (1.9 mode), and Rubinius 2.0.0 (1.9 mode).
+
 ## Contributing
 
 1. Fork it
@@ -48,7 +54,3 @@ puts Zwemwater::Response.locations     # ["Aakvlaai, Badstrand", "Abbertstrand",
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
-## License
-
-MIT. See `LICENSE`.
