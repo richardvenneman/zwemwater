@@ -8,13 +8,15 @@ module Zwemwater
     
     def get_data
       Zwemwater::Service.download_statusses if Zwemwater.statusses.nil?
-      @data = Zwemwater.statusses['features'].select { |f| f['properties']['naam'] == @query }.first
+      @data = Zwemwater.statusses['features'].select { |f| f['properties']['naam'] == @query }.first || {}
     end
     
     def data; @data || get_data; end;
     
     def status
-      get_data if @status.nil?
+      get_data if @data.nil?
+      return nil if @data.empty?
+      return @status unless @status.nil?
       
       status = @data['properties']['status']
       status['code'] = status['code'].to_sym

@@ -15,4 +15,9 @@ describe Zwemwater::Base do
     @water.get_data
     statusses.must_include @water.status['code']
   end
+  
+  it 'returns nil as status when the location is not found' do
+    water = Zwemwater.new('asdfasdf')
+    water.status.must_equal nil
+  end
 end
