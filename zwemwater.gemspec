@@ -6,6 +6,7 @@ require 'zwemwater/version'
 Gem::Specification.new do |s|
   s.name        = 'zwemwater'
   s.version     = Zwemwater::VERSION
+  s.license     = 'MIT'
   s.authors     = ['Richard Venneman']
   s.email       = 'richardvenneman@me.com'
   s.summary     = 'Zwemwater.nl Ruby API'
