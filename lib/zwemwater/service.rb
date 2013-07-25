@@ -5,9 +5,9 @@ module Zwemwater
   module Service
     SOURCE_URL = 'http://www.zwemwater.nl/get_all_plekken'
     
-    def self.download_statusses
+    def self.get_statuses
       response = HTTParty.get(SOURCE_URL)
-      Zwemwater.statusses = JSON.parse(response.body)
+      Zwemwater.statuses = JSON.parse(response.body)
     end
   end
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-statusses = [:goed, :negatief_zwemadvies, :waarschuwing, :zwemverbod]
+statuses = [:goed, :negatief_zwemadvies, :waarschuwing, :zwemverbod]
 
 describe Zwemwater::Base do
   before do
@@ -12,8 +12,7 @@ describe Zwemwater::Base do
   end
   
   it 'returns the status' do
-    @water.get_data
-    statusses.must_include @water.status['code']
+    statuses.must_include @water.status['code']
   end
   
   it 'returns nil as status when the location is not found' do

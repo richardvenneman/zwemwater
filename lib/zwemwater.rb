@@ -3,11 +3,12 @@ require 'zwemwater/base'
 require 'zwemwater/service'
 
 module Zwemwater
-  @@statusses = nil
-  def self.statusses; @@statusses; end;
-  def self.statusses=(value); @@statusses = value; end;
+  @@statuses = nil
+  def self.statuses; @@statuses; end;
+  def self.statuses=(value); @@statuses = value; end;
   
   def self.new(query)
+    Zwemwater::Service.get_statuses if @statuses.nil?
     Zwemwater::Base.new(query)
   end
 end
