@@ -1,5 +1,6 @@
 # Zwemwater
 [![Build Status](https://travis-ci.org/richardvenneman/zwemwater.png?branch=master)](https://travis-ci.org/richardvenneman/zwemwater)
+[![Coverage Status](https://coveralls.io/repos/richardvenneman/zwemwater/badge.png?branch=master)](https://coveralls.io/r/richardvenneman/zwemwater?branch=master)
 [![Gem Version](https://badge.fury.io/rb/zwemwater.png)](http://badge.fury.io/rb/zwemwater)
 
 
