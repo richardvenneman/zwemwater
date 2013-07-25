@@ -1,18 +1,8 @@
 require 'spec_helper'
 
-statusses = [:goed, :negatief_zwemadvies, :waarschuwing, :zwemverbod]
-
 describe Zwemwater do
-  before do
-    @water = Zwemwater.new('Lytse Wielen')
-  end
-  
-  it 'returns the query' do
-    @water.query.must_equal 'Lytse Wielen'
-  end
-  
-  it 'returns the status' do
-    @water.get_data
-    statusses.must_include @water.status['code']
+  it 'initializes a Zwemwater::Base instance' do
+    water = Zwemwater.new('Lytse Wielen')
+    water.class.must_equal Zwemwater::Base
   end
 end
