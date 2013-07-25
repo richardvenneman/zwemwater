@@ -4,7 +4,7 @@ module Zwemwater
     
     def initialize(query)
       @query = query
-      @data = Zwemwater.statuses['features'].select { |f| f['properties']['naam'] == @query }.first || {}
+      @data = Zwemwater::Response.for(@query)
     end
     
     def status

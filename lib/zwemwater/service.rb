@@ -7,7 +7,7 @@ module Zwemwater
     
     def self.get_statuses
       response = HTTParty.get(SOURCE_URL)
-      Zwemwater.statuses = JSON.parse(response.body)
+      Zwemwater::Response.statuses = JSON.parse(response.body)
     end
   end
 end
