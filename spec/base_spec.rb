@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-statuses = %i(goed negatief_zwemadvies waarschuwing zwemverbod)
+statuses = [:goed, :negatief_zwemadvies, :waarschuwing, :zwemverbod]
 
 describe Zwemwater::Base do
   before do
