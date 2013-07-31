@@ -6,3 +6,4 @@ rdoc
 .rspec
 .bundle
 .ruby-version
+coverage/

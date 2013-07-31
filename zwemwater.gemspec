@@ -14,8 +14,10 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/richardvenneman/zwemwater'
   
   s.files       = Dir.glob("lib/**/*")
-    
-  s.add_development_dependency('rake', '~> 10.1.0')
+  
+  s.add_dependency('httparty', '~> 0.11.0')
+  
   s.add_development_dependency('httparty', '~> 0.11.0')
+  s.add_development_dependency('rake', '~> 10.1.0')
   s.add_development_dependency('webmock', '~> 1.13.0')
 end
